@@ -1,11 +1,11 @@
 'use strict';
 
-var Helper = require('../helper');
+import { createModelBuilder } from '../helper';
 
 
 describe('moddle', function() {
 
-  var createModel = Helper.createModelBuilder('test/fixtures/model/');
+  var createModel = createModelBuilder('test/fixtures/model/');
 
 
   describe('extension', function() {

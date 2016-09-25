@@ -40,7 +40,8 @@ module.exports = function(grunt) {
         options: {
           reporter: 'spec',
           require: [
-            './test/expect.js'
+            './test/babel',
+            './test/expect'
           ]
         },
         src: ['test/**/*.js']

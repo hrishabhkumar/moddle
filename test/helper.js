@@ -1,16 +1,17 @@
 'use strict';
 
-var fs = require('fs'),
-    map = require('lodash/collection/map');
+import { readFileSync } from 'fs';
 
-var Moddle = require('../');
+import { map } from 'lodash-es';
+
+import Moddle from '../';
 
 
-function readFile(filename) {
-  return fs.readFileSync(filename, { encoding: 'UTF-8' });
+export function readFile(filename) {
+  return readFileSync(filename, { encoding: 'UTF-8' });
 }
 
-function createModelBuilder(base) {
+export function createModelBuilder(base) {
 
   var cache = {};
 
@@ -40,7 +41,3 @@ function createModelBuilder(base) {
 
   return createModel;
 }
-
-
-module.exports.readFile = readFile;
-module.exports.createModelBuilder = createModelBuilder;
